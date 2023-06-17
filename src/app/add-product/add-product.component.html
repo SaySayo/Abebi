@@ -1,0 +1,19 @@
+<h2>Add New Product</h2>
+
+<form (ngSubmit)="onSubmit()" #productForm="ngForm">
+  <mat-form-field>
+    <input matInput placeholder="Name" name="name" [(ngModel)]="newProduct.name" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Description" name="description" [(ngModel)]="newProduct.description" required>
+    This is for the red website
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Image URL" name="imageUrl" [(ngModel)]="newProduct.imageUrl" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Price" name="price" [(ngModel)]="newProduct.price" required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!productForm.form.valid">Add Product</button>
+</form>
+
